@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from gradio_client import Client
 
 app = Flask(__name__)
+CORS(app)
 client = Client("mohin999/test1")
 
 @app.route("/predict", methods=["POST"])
